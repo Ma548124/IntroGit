@@ -29,7 +29,7 @@ public:
     friend double operator-(const Point& p1, const Point& p2) {
         double dx = p1.x - p2.x;
         double dy = p1.y - p2.y;
-        return std::sqrt(dx * dx + dy * dy);
+        return sqrt(dx * dx + dy * dy);
     }
 
     // Equality: p1 == p2
@@ -58,19 +58,19 @@ public:
         char ch;
         is >> ch; // Read '('
         if (ch != '(') {
-            is.setstate(std::ios::failbit);
+            is.setstate(ios::failbit);
             return is;
         }
         is >> p.x;
         is >> ch; // Read ','
         if (ch != ',') {
-            is.setstate(std::ios::failbit);
+            is.setstate(ios::failbit);
             return is;
         }
         is >> p.y;
         is >> ch; // Read ')'
         if (ch != ')') {
-            is.setstate(std::ios::failbit);
+            is.setstate(ios::failbit);
             return is;
         }
         return is;
