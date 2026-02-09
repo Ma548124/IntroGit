@@ -116,7 +116,7 @@ public:
     }
 };
 
-// Example usage (for testing)
+
 int main() {
     Point p1(5.16, 13.567);
     Point p2(2.98, 8.24);
