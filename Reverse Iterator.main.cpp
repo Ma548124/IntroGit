@@ -78,11 +78,11 @@ public:
     const_reference operator[](size_type i) const { return data_[i]; }
 
     reference at(size_type i) {
-        if (i >= size_) throw std::out_of_range("SimpleVec::at");
+        if (i >= size_) throw out_of_range("SimpleVec::at");
         return data_[i];
     }
     const_reference at(size_type i) const {
-        if (i >= size_) throw std::out_of_range("SimpleVec::at");
+        if (i >= size_) throw out_of_range("SimpleVec::at");
         return data_[i];
     }
 
@@ -126,7 +126,7 @@ public:
         // iterator traits
         using iterator_type = iterator;
         using value_type      = T;
-        using difference_type = std::ptrdiff_t;
+        using difference_type = ptrdiff_t;
         using pointer         = T*;
         using reference       = T&;
 
@@ -213,7 +213,7 @@ public:
     public:
         using iterator_type = const_iterator;
         using value_type      = T;
-        using difference_type = std::ptrdiff_t;
+        using difference_type = ptrdiff_t;
         using pointer         = const T*;
         using reference       = const T&;
 
