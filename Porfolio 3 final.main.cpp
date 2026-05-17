@@ -46,11 +46,7 @@ struct Dungeon {
     Player player;
 };
 
-// File format:
-// First line: ROWS COLS NAME
-// Next ROWS lines: grid data (space-separated chars)
-// Next lines: Teleporter pairs "T X1 Y1 X2 Y2"
-// End with "END"
+
 
 bool saveDungeonToFile(const Dungeon& dungeon, const string& filename) {
     ofstream file(filename);
@@ -71,7 +67,7 @@ bool saveDungeonToFile(const Dungeon& dungeon, const string& filename) {
         file << endl;
     }
     
-    // Teleporters
+  
     for (const auto& tp : dungeon.teleporters) {
         file << "T " << tp.first.first << " " << tp.first.second << " "
              << tp.second.first << " " << tp.second.second << endl;
